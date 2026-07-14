@@ -268,18 +268,26 @@ footer a:hover { color: var(--text); }
   .site-header, .hero, .section, .contact, footer { width: calc(100% - 32px); }
   .site-header { grid-template-columns: 1fr auto; }
   .site-header nav { display: none; }
-  .hero { min-height: auto; padding: 5rem 0; }
-  .hero-title { margin: 3rem 0 2rem; }
-  .hero-intro { margin: 1.75rem 0 2rem; align-items: center; gap: 1.5rem; }
+  .hero { min-height: auto; padding: 3.5rem 0 4rem; }
+  .eyebrow { margin-bottom: .75rem; }
+  .hero-title { width: 100%; margin: 0; }
+  .hero-intro {
+    margin: 1.75rem 0 2.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
   .hero-intro .hero-title { margin: 0; }
-  .hero-title h1 { font-size: clamp(3.25rem, 17vw, 5rem); }
-  .profile-photo { width: 96px; margin: 0; flex: 0 0 auto; }
-  .profile-photo > img { width: 96px; height: 96px; }
-  .profile-links { margin: 0; gap: .55rem; }
+  .hero-title h1 { font-size: clamp(3rem, 15vw, 4.25rem); }
+  .hero-title p { max-width: 280px; font-size: 1rem; line-height: 1.45; }
+  .profile-photo { order: -1; width: 88px; margin: 0; }
+  .profile-photo > img { width: 88px; height: 88px; }
+  .profile-links { margin: 0; gap: .65rem; }
   .profile-links a { width: 18px; height: 18px; }
   .profile-links svg, .profile-links .profile-brand-icon { width: 14px; height: 14px; }
   .hero-bottom, .section-heading, .timeline-item, .publication, .about-grid { grid-template-columns: 1fr; }
-  .hero-bottom { gap: 2rem; }
+  .hero-bottom { gap: 1.5rem; }
+  .hero-bottom > p { font-size: .94rem; line-height: 1.65; }
   .hero-actions { width: 100%; }
   .button { flex: 1; justify-content: space-between; }
   .section { padding: 4.5rem 0; }
