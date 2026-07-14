@@ -7,8 +7,10 @@ bioinformatics engineering, and data science.
 
 - `index.html` — profile, experience, selected publications, and expertise
 - `publications.html` — complete publication list with Google Scholar links
-- `styles.css` — responsive site styling
-- `script.js` — progressive reveal behavior and footer year
+- `assets/css/` — responsive site styling
+- `assets/js/` — progressive behavior and footer year
+- `assets/icons/` — site icons
+- `59269828.jpeg` — profile image
 
 ## Preview locally
 
