@@ -1,1 +1,13 @@
+# Local and editor files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+
+# Keep CVs and other PDF documents private.
 *.pdf
