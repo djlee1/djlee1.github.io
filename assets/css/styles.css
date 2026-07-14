@@ -44,6 +44,8 @@ p, h1, h2, h3 { margin-top: 0; }
   min-height: 560px;
   margin: auto;
   padding: 7rem 0 6rem;
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid var(--border);
 }
 .eyebrow, .section-number {
@@ -54,11 +56,12 @@ p, h1, h2, h3 { margin-top: 0; }
   letter-spacing: .08em;
   text-transform: uppercase;
 }
-.eyebrow { display: flex; align-items: center; gap: .5rem; }
+.eyebrow { order: 0; display: flex; align-items: center; gap: .5rem; }
 .status-dot { width: 6px; height: 6px; border-radius: 50%; background: #888; }
 .hero-title { margin: 4rem 0 3rem; }
 .hero-intro {
-  margin: 4rem 0 3rem;
+  order: 2;
+  margin: 2rem 0 3rem;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -74,12 +77,12 @@ p, h1, h2, h3 { margin-top: 0; }
 }
 .hero-title p { margin: 0; color: var(--secondary); font-size: clamp(1.1rem, 2vw, 1.4rem); }
 .profile-photo {
-  width: 148px;
+  width: 132px;
   margin: 0 2rem 0 0;
 }
 .profile-photo > img {
-  width: 100%;
-  aspect-ratio: 1;
+  width: 132px;
+  height: 132px;
   display: block;
   object-fit: cover;
   object-position: center;
@@ -87,21 +90,20 @@ p, h1, h2, h3 { margin-top: 0; }
   opacity: .76;
   filter: saturate(.72) contrast(.9) brightness(1.04) blur(.2px);
 }
-.profile-links { margin-top: .55rem; display: flex; justify-content: flex-end; gap: .35rem; }
+.profile-links { order: 1; margin: 0; display: flex; justify-content: flex-start; gap: .75rem; }
 .profile-links a {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   display: grid;
   place-items: center;
-  border: 1px solid var(--border);
-  border-radius: 50%;
   color: var(--secondary);
-  transition: color .2s ease, border-color .2s ease, background .2s ease;
+  transition: color .2s ease, opacity .2s ease;
 }
-.profile-links a:hover { background: var(--surface); border-color: #aaa; color: var(--text); }
-.profile-links svg { width: 12px; height: 12px; fill: currentColor; }
-.profile-links .profile-brand-icon { width: 12px; height: 12px; display: block; object-fit: contain; opacity: .72; }
+.profile-links a:hover { color: var(--text); opacity: .65; }
+.profile-links svg { width: 16px; height: 16px; fill: currentColor; }
+.profile-links .profile-brand-icon { width: 16px; height: 16px; display: block; object-fit: contain; opacity: .72; }
 .hero-bottom {
+  order: 3;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: end;
@@ -268,10 +270,14 @@ footer a:hover { color: var(--text); }
   .site-header nav { display: none; }
   .hero { min-height: auto; padding: 5rem 0; }
   .hero-title { margin: 3rem 0 2rem; }
-  .hero-intro { margin: 3rem 0 2rem; align-items: center; gap: 1.5rem; }
+  .hero-intro { margin: 1.75rem 0 2rem; align-items: center; gap: 1.5rem; }
   .hero-intro .hero-title { margin: 0; }
   .hero-title h1 { font-size: clamp(3.25rem, 17vw, 5rem); }
-  .profile-photo { width: 116px; margin: 0; flex: 0 0 auto; }
+  .profile-photo { width: 96px; margin: 0; flex: 0 0 auto; }
+  .profile-photo > img { width: 96px; height: 96px; }
+  .profile-links { margin: 0; gap: .55rem; }
+  .profile-links a { width: 18px; height: 18px; }
+  .profile-links svg, .profile-links .profile-brand-icon { width: 14px; height: 14px; }
   .hero-bottom, .section-heading, .timeline-item, .publication, .about-grid { grid-template-columns: 1fr; }
   .hero-bottom { gap: 2rem; }
   .hero-actions { width: 100%; }
