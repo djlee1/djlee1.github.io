@@ -88,7 +88,7 @@ p, h1, h2, h3 { margin-top: 0; }
   object-position: center;
   border-radius: 4px;
   opacity: .76;
-  filter: saturate(.72) contrast(.9) brightness(1.04) blur(.2px);
+  filter: saturate(.72) contrast(.9) brightness(1.04);
 }
 .profile-links { order: 1; margin: 0; display: flex; justify-content: flex-start; gap: .75rem; }
 .profile-links a {
@@ -280,8 +280,8 @@ footer a:hover { color: var(--text); }
   .hero-intro .hero-title { margin: 0; }
   .hero-title h1 { font-size: clamp(3rem, 15vw, 4.25rem); }
   .hero-title p { max-width: 280px; font-size: 1rem; line-height: 1.45; }
-  .profile-photo { order: -1; width: 88px; margin: 0; }
-  .profile-photo > img { width: 88px; height: 88px; }
+  .profile-photo { order: -1; width: 132px; margin: 0; }
+  .profile-photo > img { width: 132px; height: 132px; }
   .profile-links { margin: 0; gap: .65rem; }
   .profile-links a { width: 18px; height: 18px; }
   .profile-links svg, .profile-links .profile-brand-icon { width: 14px; height: 14px; }
